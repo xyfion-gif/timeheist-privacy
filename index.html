@@ -1,64 +1,168 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Privacy Policy - TimeHeist</title>
+  <title>Privacy Policy / Gizlilik Politikası - TimeHeist</title>
   <style>
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
       line-height: 1.6;
       color: #333;
-      max-width: 800px;
+      max-width: 840px;
       margin: 0 auto;
       padding: 24px;
-      background-color: #f9f9fb;
+      background-color: #0f121d;
     }
     .container {
       background: #ffffff;
-      padding: 32px;
-      border-radius: 12px;
-      box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+      padding: 36px;
+      border-radius: 14px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.25);
     }
-    h1 { color: #111; margin-top: 0; }
-    h2 { color: #2563eb; margin-top: 24px; }
-    p, li { color: #4b5563; }
-    .updated { color: #888; font-size: 0.9em; margin-bottom: 24px; }
+    .lang-switch {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 24px;
+      padding-bottom: 16px;
+      border-bottom: 2px solid #f0f2f5;
+    }
+    .lang-btn {
+      padding: 8px 18px;
+      border: 1px solid #cbd5e1;
+      border-radius: 8px;
+      background: #f8fafc;
+      font-weight: 600;
+      cursor: pointer;
+      font-size: 14px;
+      transition: all 0.2s ease;
+    }
+    .lang-btn.active {
+      background: #2563eb;
+      color: #ffffff;
+      border-color: #2563eb;
+    }
+    h1 { color: #0f172a; margin-top: 0; font-size: 26px; }
+    h2 { color: #2563eb; margin-top: 24px; font-size: 19px; border-bottom: 1px solid #e2e8f0; padding-bottom: 6px; }
+    p, li { color: #334155; font-size: 15px; }
+    ul { padding-left: 20px; }
+    .updated { color: #64748b; font-size: 0.9em; margin-bottom: 20px; }
+    .hidden { display: none; }
+    .badge {
+      display: inline-block;
+      background: #dcfce7;
+      color: #166534;
+      padding: 3px 8px;
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 600;
+    }
   </style>
 </head>
 <body>
   <div class="container">
-    <h1>Privacy Policy for TimeHeist</h1>
-    <div class="updated">Last updated: November 2026</div>
+    
+    <!-- Dil Değiştirici Butonlar -->
+    <div class="lang-switch">
+      <button class="lang-btn active" id="btn-tr" onclick="setLang('tr')">🇹🇷 Türkçe</button>
+      <button class="lang-btn" id="btn-en" onclick="setLang('en')">🇬🇧 English</button>
+    </div>
 
-    <p>This Privacy Policy describes how <strong>Xyfion Games</strong> ("we", "us", or "our") handles user information when you play our mobile game <strong>TimeHeist</strong>.</p>
+    <!-- TÜRKÇE BÖLÜM -->
+    <div id="content-tr">
+      <h1>TimeHeist Gizlilik Politikası</h1>
+      <div class="updated">Son Güncelleme: Kasım 2026 &nbsp;|&nbsp; <span class="badge">Xyfion Games</span></div>
 
-    <h2>1. Information We Collect</h2>
-    <p>TimeHeist is designed to be fully enjoyable without collecting personal identifying information. Depending on how you interact with the game:</p>
-    <ul>
-      <li><strong>Anonymous Profile & Guest Names:</strong> We generate a random guest display name (e.g., Guest #42) and anonymous user ID using Google Firebase to store your in-game level progress, unlocked skins, and community map creations.</li>
-      <li><strong>Optional Social Login:</strong> If you choose to log in with Google, we only receive your public display name and unique authentication ID to sync your progress across devices. We do not access contacts, private files, or personal feeds.</li>
-      <li><strong>User-Generated Content:</strong> When you design and upload a custom puzzle level in the Level Editor, the tile layout and map name are uploaded to our Cloud Firestore database for other players to play and enjoy.</li>
-    </ul>
+      <p>Bu Gizlilik Politikası, <strong>Xyfion Games</strong> ("biz" veya "bizim") tarafından geliştirilen <strong>TimeHeist</strong> mobil oyununu oynadığınızda bilgilerinizin nasıl işlendiğini açıklamaktadır.</p>
 
-    <h2>2. Advertising and Purchases</h2>
-    <p><strong>TimeHeist contains NO advertisements and NO real-money in-app purchases.</strong> We do not track you across third-party apps or websites for targeted advertising.</p>
+      <h2>1. Toplanan Bilgiler</h2>
+      <p>TimeHeist, kişisel kimliğinizi ortaya çıkaracak hiçbir özel veriyi toplamadan keyifle oynanabilecek şekilde tasarlanmıştır:</p>
+      <ul>
+        <li><strong>Anonim Oyuncu Profili ve Misafir Adları:</strong> Bölüm ilerlemenizi, açtığınız kostümleri ve topluluk haritası kreasyonlarınızı kaydetmek için Google Firebase üzerinden rastgele bir misafir adı (Örn: Misafir #42) ve anonim kullanıcı kimliği oluşturulur.</li>
+        <li><strong>İsteğe Bağlı Google ile Giriş:</strong> Oyunda isteğe bağlı olarak Google hesabınızla giriş yaparsanız, ilerlemenizi cihazlar arasında eşitlemek amacıyla yalnızca herkese açık görünen adınız ve benzersiz kimlik belirteciniz kullanılır. Rehberinize, fotoğraflarınıza veya özel dosyalarınıza kesinlikle erişilmez.</li>
+        <li><strong>Kullanıcı Tarafından Üretilen İçerik (Topluluk Haritaları):</strong> Harita Düzenleyicide yeni bir bulmaca tasarlayıp paylaştığınızda; harita yerleşimi ve harita ismi, diğer oyuncuların oynayabilmesi için Cloud Firestore veritabanımıza yüklenir.</li>
+      </ul>
 
-    <h2>3. Third-Party Services</h2>
-    <p>We use the following third-party infrastructure:</p>
-    <ul>
-      <li><strong>Google Firebase (Cloud Firestore & Authentication):</strong> For saving game data, high scores, and community levels. Google's privacy policy can be viewed at <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">https://policies.google.com/privacy</a>.</li>
-    </ul>
+      <h2>2. Reklamlar ve Satın Alımlar</h2>
+      <p><strong>TimeHeist içerisinde HİÇBİR REKLAM bulunmamaktadır ve GERÇEK PARA ile uygulama içi satın alma YOKTUR.</strong> Hedefli reklamcılık amacıyla üçüncü taraf uygulama veya web siteleri üzerinden kullanıcı takibi yapılmaz.</p>
 
-    <h2>4. Children's Privacy</h2>
-    <p>TimeHeist does not knowingly collect any personal information from children under the age of 13. If you believe that your child has provided us with personal information, please contact us so we can immediately delete it.</p>
+      <h2>3. Üçüncü Taraf Hizmetleri</h2>
+      <p>Oyunumuz güvenli ve kesintisiz bulut hizmeti için aşağıdaki altyapıyı kullanır:</p>
+      <ul>
+        <li><strong>Google Firebase (Cloud Firestore & Authentication):</strong> Oyun kayıtları, liderlik tablosu ve topluluk haritaları için kullanılır. Google gizlilik politikasına <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">buradan</a> ulaşabilirsiniz.</li>
+      </ul>
 
-    <h2>5. Data Retention & Deletion</h2>
-    <p>You can clear your local game data at any time by clearing the application storage in your device settings. To request deletion of community-submitted maps or cloud profile data, please contact us.</p>
+      <h2>4. Çocukların Gizliliği</h2>
+      <p>TimeHeist, 13 yaşın altındaki çocuklardan bilerek herhangi bir kişisel veri toplamaz. Oyunumuz her yaş grubunun güvenle oynayabileceği aile dostu bir yapıdadır.</p>
 
-    <h2>6. Contact Us</h2>
-    <p>If you have any questions or suggestions regarding this Privacy Policy, please contact us at:<br>
-    <strong>Email:</strong> xyfion@xyfion.com</p>
+      <h2>5. Veri Saklama ve Silme Hakkı</h2>
+      <p>Cihaz ayarlarınızdan uygulama verilerini temizleyerek yerel oyun kayıtlarınızı dilediğiniz an sıfırlayabilirsiniz. Toplulukta paylaştığınız haritaların veya bulut profilinizin silinmesini talep etmek için bizimle e-posta yoluyla iletişime geçebilirsiniz.</p>
+
+      <h2>6. İletişim</h2>
+      <p>Bu Gizlilik Politikası ile ilgili herhangi bir sorunuz, öneriniz veya talebiniz olursa bizimle iletişime geçebilirsiniz:<br>
+      <strong>E-Posta:</strong> <a href="mailto:xyfion@xyfion.com">xyfion@xyfion.com</a></p>
+    </div>
+
+    <!-- İNGİLİZCE BÖLÜM -->
+    <div id="content-en" class="hidden">
+      <h1>Privacy Policy for TimeHeist</h1>
+      <div class="updated">Last updated: November 2026 &nbsp;|&nbsp; <span class="badge">Xyfion Games</span></div>
+
+      <p>This Privacy Policy describes how <strong>Xyfion Games</strong> ("we", "us", or "our") handles user information when you play our mobile game <strong>TimeHeist</strong>.</p>
+
+      <h2>1. Information We Collect</h2>
+      <p>TimeHeist is designed to be fully enjoyable without collecting personal identifying information:</p>
+      <ul>
+        <li><strong>Anonymous Profile & Guest Names:</strong> We generate a random guest display name (e.g., Guest #42) and anonymous user ID using Google Firebase to store your in-game level progress, unlocked skins, and community map creations.</li>
+        <li><strong>Optional Social Login:</strong> If you choose to log in with Google, we only receive your public display name and unique authentication ID to sync your progress across devices. We do not access contacts, private files, or personal feeds.</li>
+        <li><strong>User-Generated Content:</strong> When you design and upload a custom puzzle level in the Level Editor, the tile layout and map name are uploaded to our Cloud Firestore database for other players to enjoy.</li>
+      </ul>
+
+      <h2>2. Advertising and Purchases</h2>
+      <p><strong>TimeHeist contains NO advertisements and NO real-money in-app purchases.</strong> We do not track you across third-party apps or websites for targeted advertising.</p>
+
+      <h2>3. Third-Party Services</h2>
+      <p>We use the following third-party infrastructure:</p>
+      <ul>
+        <li><strong>Google Firebase (Cloud Firestore & Authentication):</strong> For saving game data, high scores, and community levels. Google's privacy policy can be viewed at <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">https://policies.google.com/privacy</a>.</li>
+      </ul>
+
+      <h2>4. Children's Privacy</h2>
+      <p>TimeHeist does not knowingly collect any personal information from children under the age of 13.</p>
+
+      <h2>5. Data Retention & Deletion</h2>
+      <p>You can clear your local game data at any time by clearing application storage in your device settings. To request deletion of community-submitted maps or cloud profile data, please contact us.</p>
+
+      <h2>6. Contact Us</h2>
+      <p>If you have any questions regarding this Privacy Policy, please contact us at:<br>
+      <strong>Email:</strong> <a href="mailto:xyfion@xyfion.com">xyfion@xyfion.com</a></p>
+    </div>
+
   </div>
+
+  <script>
+    function setLang(lang) {
+      const tr = document.getElementById('content-tr');
+      const en = document.getElementById('content-en');
+      const btnTr = document.getElementById('btn-tr');
+      const btnEn = document.getElementById('btn-en');
+
+      if (lang === 'tr') {
+        tr.classList.remove('hidden');
+        en.classList.add('hidden');
+        btnTr.classList.add('active');
+        btnEn.classList.remove('active');
+      } else {
+        tr.classList.add('hidden');
+        en.classList.remove('hidden');
+        btnTr.classList.remove('active');
+        btnEn.classList.add('active');
+      }
+    }
+
+    if (!navigator.language.startsWith('tr')) {
+      setLang('en');
+    }
+  </script>
 </body>
 </html>
